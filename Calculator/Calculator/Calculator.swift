@@ -49,17 +49,17 @@ class Calculator: CalculatorProtocol {
     func processOperator(value: CalculatorOperator) {
         switch value {
             case .Equals:
-                if (isValidInput()) {
-                    let result: Float? = evaluateExpression()
-                    if (result != nil) {
-                        _display = String(result!)
-                    } else {
-                        _display = errorMessage
-                    }
-                } else {
+                if (!isValidInput()) {
                     _display = errorMessage
+                    return
                 }
-            
+                let result: Float? = evaluateExpression()
+                if (result == nil) {
+                    _display = errorMessage
+                    return
+                }
+                _display = String(result!)
+                
             case .Clear:
                 _display = "0"
             
