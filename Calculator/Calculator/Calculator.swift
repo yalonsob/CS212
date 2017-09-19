@@ -27,7 +27,6 @@ protocol CalculatorProtocol {
 
 class Calculator: CalculatorProtocol {
     private var _display: String
-    private var errorMessage = "ERROR"
     var display: String {
         get {
             return _display
@@ -39,7 +38,7 @@ class Calculator: CalculatorProtocol {
     }
     
     func processDigit(digit: Int) {
-        if (display == "0") {
+        if (display == "0" || display == "ERROR") {
             _display = String(digit)
         } else {
             _display = _display + String(digit)
@@ -47,6 +46,7 @@ class Calculator: CalculatorProtocol {
     }
     
     func processOperator(value: CalculatorOperator) {
+        let errorMessage = "ERROR"
         switch value {
             case .Equals:
                 if (!isValidInput()) {
