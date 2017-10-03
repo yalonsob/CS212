@@ -23,18 +23,49 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fLN-gE-Plx">
+                                <rect key="frame" x="50" y="200" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N14-wd-hfV">
+                                <rect key="frame" x="50" y="280" width="220" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6la-lE-Oql">
+                                <rect key="frame" x="136" y="330" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="I8T-vu-WKl"/>
+                                </connections>
+                            </switch>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="fLN-gE-Plx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="J6Q-fT-9bP"/>
                             <constraint firstItem="zaV-qu-mi2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Kli-MF-Sqs"/>
+                            <constraint firstItem="N14-wd-hfV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="LSN-wt-OSv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zaV-qu-mi2" secondAttribute="trailing" constant="50" id="WcT-4g-m5r"/>
+                            <constraint firstItem="N14-wd-hfV" firstAttribute="top" secondItem="fLN-gE-Plx" secondAttribute="bottom" constant="50" id="XxU-sd-Se8"/>
                             <constraint firstItem="zaV-qu-mi2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Y4W-kL-W3U"/>
+                            <constraint firstItem="N14-wd-hfV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fhs-RI-7Da"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fLN-gE-Plx" secondAttribute="trailing" constant="50" id="hRo-6g-HfZ"/>
+                            <constraint firstItem="fLN-gE-Plx" firstAttribute="top" secondItem="zaV-qu-mi2" secondAttribute="bottom" constant="50" id="heC-d9-ric"/>
+                            <constraint firstItem="6la-lE-Oql" firstAttribute="top" secondItem="N14-wd-hfV" secondAttribute="bottom" constant="20" id="hlf-JH-Uw3"/>
+                            <constraint firstItem="6la-lE-Oql" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="spt-4L-nVZ"/>
+                            <constraint firstItem="fLN-gE-Plx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="unf-eT-uw2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N14-wd-hfV" secondAttribute="trailing" constant="50" id="zhp-7Z-i2T"/>
                             <constraint firstItem="zaV-qu-mi2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="zmd-KD-Q8n"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="switchForText3" destination="6la-lE-Oql" id="gGG-Ha-ZwC"/>
                         <outlet property="textField1" destination="zaV-qu-mi2" id="KbQ-hv-Ga4"/>
+                        <outlet property="textField2" destination="fLN-gE-Plx" id="k0M-08-Qpw"/>
+                        <outlet property="textField3" destination="N14-wd-hfV" id="KUu-tq-uFj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

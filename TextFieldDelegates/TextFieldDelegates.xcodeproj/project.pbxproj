@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236C7A181F83410A003B1183 /* DollarsTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236C7A171F83410A003B1183 /* DollarsTextFieldDelegate.swift */; };
+		236C7A1A1F83F81E003B1183 /* SwitchTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236C7A191F83F81E003B1183 /* SwitchTextFieldDelegate.swift */; };
 		238210221F8336160083408B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238210211F8336160083408B /* AppDelegate.swift */; };
 		238210241F8336170083408B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238210231F8336170083408B /* ViewController.swift */; };
 		238210271F8336170083408B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238210251F8336170083408B /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		236C7A171F83410A003B1183 /* DollarsTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DollarsTextFieldDelegate.swift; sourceTree = "<group>"; };
+		236C7A191F83F81E003B1183 /* SwitchTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchTextFieldDelegate.swift; sourceTree = "<group>"; };
 		2382101E1F8336160083408B /* TextFieldDelegates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextFieldDelegates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		238210211F8336160083408B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		238210231F8336170083408B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,9 +60,9 @@
 		238210201F8336160083408B /* TextFieldDelegates */ = {
 			isa = PBXGroup;
 			children = (
-				238210331F8336F10083408B /* Delegates */,
 				238210231F8336170083408B /* ViewController.swift */,
 				238210251F8336170083408B /* Main.storyboard */,
+				238210331F8336F10083408B /* Delegates */,
 				238210211F8336160083408B /* AppDelegate.swift */,
 				238210281F8336170083408B /* Assets.xcassets */,
 				2382102A1F8336170083408B /* LaunchScreen.storyboard */,
@@ -71,6 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				238210341F83372B0083408B /* FiveCharTextFieldDelegate.swift */,
+				236C7A171F83410A003B1183 /* DollarsTextFieldDelegate.swift */,
+				236C7A191F83F81E003B1183 /* SwitchTextFieldDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -147,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236C7A181F83410A003B1183 /* DollarsTextFieldDelegate.swift in Sources */,
 				238210241F8336170083408B /* ViewController.swift in Sources */,
+				236C7A1A1F83F81E003B1183 /* SwitchTextFieldDelegate.swift in Sources */,
 				238210351F83372B0083408B /* FiveCharTextFieldDelegate.swift in Sources */,
 				238210221F8336160083408B /* AppDelegate.swift in Sources */,
 			);
