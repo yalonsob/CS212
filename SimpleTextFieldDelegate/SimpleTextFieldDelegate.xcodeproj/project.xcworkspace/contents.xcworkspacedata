@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Counter2Storyboard.xcodeproj">
+      location = "self:SimpleTextFieldDelegate.xcodeproj">
    </FileRef>
 </Workspace>

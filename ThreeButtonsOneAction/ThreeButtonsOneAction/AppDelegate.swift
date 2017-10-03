@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Counter2Storyboard
+//  ThreeButtonsOneAction
 //
-//  Created by Yolanda Alonso on 9/21/17.
+//  Created by Yolanda Alonso on 9/28/17.
 //  Copyright © 2017 Yolanda Alonso. All rights reserved.
 //
 
