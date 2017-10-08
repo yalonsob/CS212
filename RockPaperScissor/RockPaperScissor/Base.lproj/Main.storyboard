@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RockPaperScissor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="Igw-cg-jnA">
+                                <rect key="frame" x="150" y="240" width="74" height="186"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vL0-vD-Dnj">
+                                        <rect key="frame" x="0.0" y="0.0" width="74" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Rock"/>
+                                        <connections>
+                                            <action selector="selectMoveWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="hBN-O3-GQj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3i7-8A-pil">
+                                        <rect key="frame" x="0.0" y="75" width="74" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Paper"/>
+                                        <connections>
+                                            <action selector="selectMoveWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="R5s-3b-cJe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wn1-0z-VlD">
+                                        <rect key="frame" x="0.0" y="150" width="74" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Scissors"/>
+                                        <connections>
+                                            <action selector="selectMoveWithSender:" destination="BYZ-38-t0r" eventType="touchDown" id="gPc-vB-BHU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vL0-vD-Dnj" firstAttribute="centerX" secondItem="Igw-cg-jnA" secondAttribute="centerX" id="C1h-ME-Hrc"/>
+                                    <constraint firstItem="3i7-8A-pil" firstAttribute="centerX" secondItem="Igw-cg-jnA" secondAttribute="centerX" id="OMH-Kh-Zd8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Igw-cg-jnA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ho3-Sz-lre"/>
+                            <constraint firstItem="Igw-cg-jnA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yMP-eV-pht"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="paper" destination="3i7-8A-pil" id="m7Z-pw-ynU"/>
+                        <outlet property="rock" destination="vL0-vD-Dnj" id="yW5-vW-h88"/>
+                        <outlet property="scissors" destination="wn1-0z-VlD" id="3Pg-LE-xMu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
