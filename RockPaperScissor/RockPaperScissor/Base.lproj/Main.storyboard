@@ -107,8 +107,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-fa-Ipg">
-                                <rect key="frame" x="30" y="50" width="89" height="30"/>
-                                <state key="normal" title="&lt; Play Again!"/>
+                                <rect key="frame" x="30" y="50" width="85" height="30"/>
+                                <state key="normal" title="&lt; Play Again"/>
                                 <connections>
                                     <action selector="playAgain" destination="C2d-b2-Tqb" eventType="touchDown" id="7Rp-St-YJw"/>
                                 </connections>

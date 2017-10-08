@@ -19,9 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buttonsToMoves[rock] = RPSMove.rock
-        buttonsToMoves[paper] = RPSMove.paper
-        buttonsToMoves[scissors] = RPSMove.scissors
+        buttonsToMoves[rock] = .rock
+        buttonsToMoves[paper] = .paper
+        buttonsToMoves[scissors] = .scissors
     }
     
     @IBAction func selectMove(sender: UIButton) {

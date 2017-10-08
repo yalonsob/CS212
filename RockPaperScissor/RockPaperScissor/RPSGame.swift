@@ -42,6 +42,12 @@ class RPSGame {
             return .tie
         }
         
+        if (playerMove == .paper && computerMove == .scissors) ||
+            (playerMove == .scissors && computerMove == .rock) ||
+            (playerMove == .rock && computerMove == .paper) {
+            return .loss
+        }
+        
         return .win
     }
     
@@ -49,5 +55,4 @@ class RPSGame {
         self.playerMove = playerMove
         self.computerMove = computerMove
     }
-    
 }

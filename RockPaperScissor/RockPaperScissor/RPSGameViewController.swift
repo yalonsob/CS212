@@ -22,16 +22,16 @@ class RPSGameViewController: UIViewController {
         
         if let playerMove = self.playerMove {
             
-            //Game logic
+            //Play game
             myRPSGame = RPSGame(playerMove: playerMove, computerMove: RPSMove.getRandomMove())
-            let result = myRPSGame.playRPS()
+            let gameResult = myRPSGame.playRPS()
             
             //Display game info
             labelPlayerMove.text = myRPSGame.playerMove.rawValue
             labelComputerMove.text = myRPSGame.computerMove.rawValue
-            labelResult.text = result.rawValue
+            labelResult.text = gameResult.rawValue
             
-            switch result {
+            switch gameResult {
                 case .loss:
                     labelResult.textColor = UIColor.red
                 case .win:
