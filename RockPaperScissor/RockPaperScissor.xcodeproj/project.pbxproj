@@ -13,6 +13,7 @@
 		230805631F89C044006EFD8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 230805621F89C044006EFD8A /* Assets.xcassets */; };
 		230805661F89C044006EFD8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 230805641F89C044006EFD8A /* LaunchScreen.storyboard */; };
 		2308056E1F89C8A8006EFD8A /* RPSGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2308056D1F89C8A8006EFD8A /* RPSGame.swift */; };
+		230805701F89CC6E006EFD8A /* RPSGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2308056F1F89CC6E006EFD8A /* RPSGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		230805651F89C044006EFD8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		230805671F89C044006EFD8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2308056D1F89C8A8006EFD8A /* RPSGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGame.swift; sourceTree = "<group>"; };
+		2308056F1F89CC6E006EFD8A /* RPSGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +58,14 @@
 		2308055A1F89C044006EFD8A /* RockPaperScissor */ = {
 			isa = PBXGroup;
 			children = (
-				2308055B1F89C044006EFD8A /* AppDelegate.swift */,
 				2308055D1F89C044006EFD8A /* ViewController.swift */,
+				2308056F1F89CC6E006EFD8A /* RPSGameViewController.swift */,
+				2308056D1F89C8A8006EFD8A /* RPSGame.swift */,
 				2308055F1F89C044006EFD8A /* Main.storyboard */,
+				2308055B1F89C044006EFD8A /* AppDelegate.swift */,
 				230805621F89C044006EFD8A /* Assets.xcassets */,
 				230805641F89C044006EFD8A /* LaunchScreen.storyboard */,
 				230805671F89C044006EFD8A /* Info.plist */,
-				2308056D1F89C8A8006EFD8A /* RPSGame.swift */,
 			);
 			path = RockPaperScissor;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				230805701F89CC6E006EFD8A /* RPSGameViewController.swift in Sources */,
 				2308055E1F89C044006EFD8A /* ViewController.swift in Sources */,
 				2308056E1F89C8A8006EFD8A /* RPSGame.swift in Sources */,
 				2308055C1F89C044006EFD8A /* AppDelegate.swift in Sources */,

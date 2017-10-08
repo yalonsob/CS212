@@ -68,5 +68,77 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Game View Controller-->
+        <scene sceneID="P9k-zh-AeK">
+            <objects>
+                <viewController storyboardIdentifier="RPSGame" id="C2d-b2-Tqb" customClass="RPSGameViewController" customModule="RockPaperScissor" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sKQ-dz-G0B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7pd-LZ-SyA">
+                                <rect key="frame" x="161" y="140" width="54" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="gVo-6A-lg8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vs." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y2h-oK-o4G">
+                                <rect key="frame" x="177" y="198" width="22" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ze-Ux-9wf">
+                                <rect key="frame" x="144" y="249" width="87" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="6MT-up-kMa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xse-2g-S1n">
+                                <rect key="frame" x="143" y="345" width="89" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-fa-Ipg">
+                                <rect key="frame" x="30" y="50" width="89" height="30"/>
+                                <state key="normal" title="&lt; Play Again!"/>
+                                <connections>
+                                    <action selector="playAgain" destination="C2d-b2-Tqb" eventType="touchDown" id="7Rp-St-YJw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eHb-fa-Ipg" firstAttribute="leading" secondItem="Pel-dC-cjb" secondAttribute="leading" constant="30" id="18Z-UY-bIR"/>
+                            <constraint firstItem="7pd-LZ-SyA" firstAttribute="centerX" secondItem="sKQ-dz-G0B" secondAttribute="centerX" id="1jj-q2-nJ7"/>
+                            <constraint firstItem="Xse-2g-S1n" firstAttribute="top" secondItem="0Ze-Ux-9wf" secondAttribute="bottom" constant="75" id="3rQ-9j-Sy6"/>
+                            <constraint firstItem="0Ze-Ux-9wf" firstAttribute="top" secondItem="y2h-oK-o4G" secondAttribute="bottom" constant="30" id="8s4-Hn-UoD"/>
+                            <constraint firstItem="y2h-oK-o4G" firstAttribute="top" secondItem="7pd-LZ-SyA" secondAttribute="bottom" constant="30" id="IGl-62-ryY"/>
+                            <constraint firstItem="y2h-oK-o4G" firstAttribute="centerX" secondItem="sKQ-dz-G0B" secondAttribute="centerX" id="Jq7-FQ-ULZ"/>
+                            <constraint firstItem="7pd-LZ-SyA" firstAttribute="top" secondItem="Pel-dC-cjb" secondAttribute="top" constant="120" id="Sax-ND-vFy"/>
+                            <constraint firstItem="Xse-2g-S1n" firstAttribute="centerX" secondItem="sKQ-dz-G0B" secondAttribute="centerX" id="XVM-lm-tsy"/>
+                            <constraint firstItem="0Ze-Ux-9wf" firstAttribute="centerX" secondItem="sKQ-dz-G0B" secondAttribute="centerX" id="fL2-0y-Iyz"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eHb-fa-Ipg" secondAttribute="trailing" constant="20" symbolic="YES" id="lDp-ZE-pc0"/>
+                            <constraint firstItem="eHb-fa-Ipg" firstAttribute="top" secondItem="Pel-dC-cjb" secondAttribute="top" constant="30" id="uqg-18-Lfb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pel-dC-cjb"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelComputerMove" destination="0Ze-Ux-9wf" id="hPp-wT-eg5"/>
+                        <outlet property="labelPlayerMove" destination="7pd-LZ-SyA" id="iPw-fC-eU3"/>
+                        <outlet property="labelResult" destination="Xse-2g-S1n" id="BHb-2y-NIk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3B4-zw-5iy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="816.34182908545733"/>
+        </scene>
     </scenes>
 </document>

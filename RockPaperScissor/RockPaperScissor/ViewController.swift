@@ -26,11 +26,13 @@ class ViewController: UIViewController {
     
     @IBAction func selectMove(sender: UIButton) {
         let move = buttonsToMoves[sender]!
-        playMove(move)
+        presentRPSGameViewController(move)
     }
     
-    func playMove(_ move: RPSMove){
-        print(move.rawValue)
+    func presentRPSGameViewController(_ move: RPSMove){
+        let myRPSGameViewController = self.storyboard!.instantiateViewController(withIdentifier: "RPSGame") as! RPSGameViewController
+        myRPSGameViewController.playerMove = move
+        self.present(myRPSGameViewController, animated: true, completion: nil)
     }
 
 }

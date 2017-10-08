@@ -12,8 +12,42 @@ enum RPSMove: String {
     case rock = "Rock"
     case paper = "Paper"
     case scissors = "Scissors"
+    
+    static func getRandomMove() -> RPSMove {
+        let value = Int(arc4random()) % 3
+        
+        switch value {
+        case 0:
+            return .rock
+        case 1:
+            return .paper
+        default:
+            return .scissors
+        }
+    }
+}
+
+enum RPSResult: String {
+    case win = "WIN"
+    case loss = "LOSS"
+    case tie = "TIE"
 }
 
 class RPSGame {
+    var playerMove: RPSMove
+    var computerMove: RPSMove
+    
+    func playRPS() -> RPSResult {
+        if computerMove == playerMove {
+            return .tie
+        }
+        
+        return .win
+    }
+    
+    init(playerMove: RPSMove, computerMove: RPSMove) {
+        self.playerMove = playerMove
+        self.computerMove = computerMove
+    }
     
 }
