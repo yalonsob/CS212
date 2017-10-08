@@ -107,8 +107,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHb-fa-Ipg">
-                                <rect key="frame" x="30" y="50" width="85" height="30"/>
-                                <state key="normal" title="&lt; Play Again"/>
+                                <rect key="frame" x="152" y="436" width="71" height="30"/>
+                                <state key="normal" title="Play Again"/>
                                 <connections>
                                     <action selector="playAgain" destination="C2d-b2-Tqb" eventType="touchDown" id="7Rp-St-YJw"/>
                                 </connections>
@@ -116,17 +116,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eHb-fa-Ipg" firstAttribute="leading" secondItem="Pel-dC-cjb" secondAttribute="leading" constant="30" id="18Z-UY-bIR"/>
                             <constraint firstItem="7pd-LZ-SyA" firstAttribute="centerX" secondItem="sKQ-dz-G0B" secondAttribute="centerX" id="1jj-q2-nJ7"/>
                             <constraint firstItem="Xse-2g-S1n" firstAttribute="top" secondItem="0Ze-Ux-9wf" secondAttribute="bottom" constant="75" id="3rQ-9j-Sy6"/>
                             <constraint firstItem="0Ze-Ux-9wf" firstAttribute="top" secondItem="y2h-oK-o4G" secondAttribute="bottom" constant="30" id="8s4-Hn-UoD"/>
                             <constraint firstItem="y2h-oK-o4G" firstAttribute="top" secondItem="7pd-LZ-SyA" secondAttribute="bottom" constant="30" id="IGl-62-ryY"/>
                             <constraint firstItem="y2h-oK-o4G" firstAttribute="centerX" secondItem="sKQ-dz-G0B" secondAttribute="centerX" id="Jq7-FQ-ULZ"/>
+                            <constraint firstItem="eHb-fa-Ipg" firstAttribute="centerX" secondItem="sKQ-dz-G0B" secondAttribute="centerX" id="QOx-T7-qRd"/>
                             <constraint firstItem="7pd-LZ-SyA" firstAttribute="top" secondItem="Pel-dC-cjb" secondAttribute="top" constant="120" id="Sax-ND-vFy"/>
                             <constraint firstItem="Xse-2g-S1n" firstAttribute="centerX" secondItem="sKQ-dz-G0B" secondAttribute="centerX" id="XVM-lm-tsy"/>
                             <constraint firstItem="0Ze-Ux-9wf" firstAttribute="centerX" secondItem="sKQ-dz-G0B" secondAttribute="centerX" id="fL2-0y-Iyz"/>
-                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eHb-fa-Ipg" secondAttribute="trailing" constant="20" symbolic="YES" id="lDp-ZE-pc0"/>
-                            <constraint firstItem="eHb-fa-Ipg" firstAttribute="top" secondItem="Pel-dC-cjb" secondAttribute="top" constant="30" id="uqg-18-Lfb"/>
+                            <constraint firstItem="eHb-fa-Ipg" firstAttribute="top" secondItem="Xse-2g-S1n" secondAttribute="bottom" constant="55" id="oii-Xi-smA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Pel-dC-cjb"/>
                     </view>
