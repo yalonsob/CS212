@@ -302,7 +302,7 @@
                                     <constraint firstAttribute="width" constant="272" id="3xa-ba-WB7"/>
                                     <constraint firstAttribute="height" constant="127" id="agw-9m-Lhj"/>
                                 </constraints>
-                                <string key="text">You almost forgot about it. Some of your friends are coming to your place to study together for tomorrow’s exam. After helping each other for a while you are all very tired and your friends go home.</string>
+                                <string key="text">Some of your friends are coming to your place to study together for tomorrow’s exam. After helping each other for a while you are all very tired and your friends go home.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
