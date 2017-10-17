@@ -360,7 +360,7 @@
                                     <constraint firstAttribute="height" constant="189" id="XqK-M1-No0"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="It is a very long night for you. You oversleep and don’t arrive on time to your final exam." textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB5-cf-S0k">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="It is a very long night for you and you are too tired. You oversleep and don’t arrive on time to your final exam." textAlignment="justified" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WB5-cf-S0k">
                                 <rect key="frame" x="24" y="315" width="272" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="272" id="dZ1-fc-2JQ"/>
