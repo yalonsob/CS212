@@ -152,7 +152,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let movieDetailVC = segue.destination as! MovieDetailViewController
         let indexPath = tableView.indexPathForSelectedRow!
-        movieDetailVC.id = self.movies[indexPath.row].id
+        movieDetailVC.movie = self.movies[indexPath.row]
         
     }
 }

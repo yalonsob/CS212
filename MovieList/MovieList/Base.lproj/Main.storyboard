@@ -180,18 +180,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52H-M2-mwX">
-                                <rect key="frame" x="47" y="191" width="201" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="textview" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bU9-ka-aSa">
+                                <rect key="frame" x="38" y="364" width="244" height="174"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="KXa-8q-JaI"/>
+                                    <constraint firstAttribute="width" constant="244" id="szs-qu-dX6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" smartDashesType="yes"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bU9-ka-aSa" firstAttribute="centerX" secondItem="3h0-4f-e7v" secondAttribute="centerX" id="IVW-Hm-SBq"/>
+                            <constraint firstItem="XIr-pV-cK4" firstAttribute="top" secondItem="bU9-ka-aSa" secondAttribute="bottom" constant="30" id="VDc-Ha-RAE"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="labelID" destination="52H-M2-mwX" id="zyH-VR-UVe"/>
+                        <outlet property="overview" destination="bU9-ka-aSa" id="bmI-lX-oio"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imp-SE-O33" userLabel="First Responder" sceneMemberID="firstResponder"/>
