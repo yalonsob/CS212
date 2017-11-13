@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  MovieList
-//
-//  Created by Jason Schatz on 10/29/15.
-//  Copyright © 2015 Jason Schatz. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
