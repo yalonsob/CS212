@@ -123,6 +123,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="58.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="0Lj-dY-Vab" kind="show" id="jFI-NY-z3I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -164,6 +167,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYr-Kx-8He" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1601" y="-619"/>
+        </scene>
+        <!--Movie Detail View Controller-->
+        <scene sceneID="Fj3-8P-fiV">
+            <objects>
+                <viewController id="0Lj-dY-Vab" customClass="MovieDetailViewController" customModule="MovieList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YD9-QR-2hP"/>
+                        <viewControllerLayoutGuide type="bottom" id="XIr-pV-cK4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3h0-4f-e7v">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="id" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52H-M2-mwX">
+                                <rect key="frame" x="47" y="191" width="201" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelID" destination="52H-M2-mwX" id="zyH-VR-UVe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Imp-SE-O33" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2475" y="-619.0140845070423"/>
         </scene>
     </scenes>
 </document>
