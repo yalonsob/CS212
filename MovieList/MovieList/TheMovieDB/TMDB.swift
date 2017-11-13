@@ -38,7 +38,7 @@ struct TMDB {
        static let MovieTopRated = "movie/top_rated";
         
         // MARK: - Genres
-       static let GenreList = "genre/list";
+       static let GenreList = "genre/movie/list";
        static let GenreIDMovies = "genre/{id}/movies";
         
         // MARK: - Collections
@@ -93,6 +93,7 @@ struct TMDB {
     struct Keys {
         static let Results = "results"
         static let Cast = "cast"
+        static let Genres = "genres"
         static let ID = "id"
         static let ErrorStatusMessage = "status_message"
         static let ConfigBaseImageURL = "base_url"

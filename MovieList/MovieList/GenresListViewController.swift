@@ -1,24 +1,23 @@
 import UIKit
 
-class MovieListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class GenreListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    var movies: [Movie] = [Movie]()
-    var id: Int!
+    var genres: [Genre] = [Genre]()
     
     override func viewDidLoad() {
         
         setUIToDownloading(true)
         
-        let url = TMDBURLs.URLForResource(TMDB.Resources.GenreIDMovies, withId: self.id)
+        let url = TMDBURLs.URLForResource(TMDB.Resources.GenreList)
         print(url)
         
         let task = URLSession.shared.dataTask(with: url) {
             data, response, error in
-
+            
             // Simple error handling
             if let error = error {
                 print(error)
@@ -26,7 +25,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
             }
             
             // Update the view controller's state
-            self.movies = self.moviesFromData(data)
+            self.genres = self.genresFromData(data)
             
             // Send the UI Updating work back to the main thread
             DispatchQueue.main.async {
@@ -55,7 +54,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     // MARK: - Table View
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count
+        return genres.count
     }
     
     var cellNumber = 0
@@ -63,49 +62,11 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
         
-        // Get the movie associated with this row out of the array
-        let movie = movies[indexPath.row]
+        // Get the genre associated with this row out of the array
+        let genre = genres[indexPath.row]
         
-        // Set the movie title
-        cell.textLabel!.text = movie.title
-        
-        // Set the movie poster
-        
-        if movie.posterPath == nil {
-            // api node has no imagepath
-            cell.imageView!.image = UIImage(named: "noImage")
-        } else {
-            // Set a placeholder before we start the download
-            cell.imageView!.image = UIImage(named: "placeHolder")
-        
-            // get url, 
-            let url = TMDBURLs.URLForPosterWithPath(movie.posterPath!)
-
-            // create task
-            let task = URLSession.shared.dataTask(with: url, completionHandler: {
-                data, response, error in
-
-                if let error = error {
-                    print(error)
-                }
-
-                if data == nil {
-                    return
-                }
-                
-                let image = UIImage(data: data!)!
-                 
-                movie.posterImage = image
-                    
-                DispatchQueue.main.async {
-                 cell.imageView!.image = image
-                }
-            })
-            
-            // resume task
-            task.resume()
-            
-        }
+        // Set the genre name
+        cell.textLabel!.text = genre.name
         
         return cell
     }
@@ -113,7 +74,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     // MARK: - Parser
     
-    func moviesFromData(_ data: Data?) -> [Movie] {
+    func genresFromData(_ data: Data?) -> [Genre] {
         
         // No data, return an empty array
         guard let data = data else {
@@ -126,26 +87,33 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         // Insist that this object must be a dictionary
         guard let dictionary = JSONObject as? [String : Any] else {
             assertionFailure("Failed to parse data. data.length: \(data.count)")
-            return [Movie]()
+            return [Genre]()
         }
         
-        // These are the dictionaries that we want to make into movies
-        let movieDictionaries = dictionary[TMDB.Keys.Results] as! [[String : AnyObject]]
+        // These are the dictionaries that we want to make into genres
+        let genresDictionaries = dictionary[TMDB.Keys.Genres] as! [[String : AnyObject]]
         
-        // This is where we will put the movies. We will return this array.
-        var movies = [Movie]()
+        // This is where we will put the genres. We will return this array.
+        var genres = [Genre]()
         
         // For each dictionary...
-        for d in movieDictionaries {
+        for g in genresDictionaries {
             
-            // Make a movie...
-            let m = Movie(dictionary: d)!
+            // Make a genre...
+            let g = Genre(dictionary: g)
             
             // Put it into the array that we will return
-            movies.append(m)
+            genres.append(g)
         }
         
-        return movies
+        return genres
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let movieVC = segue.destination as! MovieListViewController
+        let indexPath = tableView.indexPathForSelectedRow!
+        movieVC.id = self.genres[indexPath.row].id
+        
+    }
 }
+
